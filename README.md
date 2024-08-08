@@ -33,9 +33,20 @@ Displayed using ReacTree
             - Whenever a die is clicked, the application checks for the game status.
             - If the game is ended then tenzies is set.
          
-  - Logic to display the die with dots:
-      - Each die is considered like a 3 x 3 grid.
-      - Using the properties of grid-row-start, grid-column-start, grid-column-end the die is displayed with dots.
+- Logic to display the die with dots:
+    - Each die is considered like a 3 x 3 grid.
+    - Using the properties of grid-row-start, grid-column-start, grid-column-end the die is displayed with dots.
+   
+- Function passed as prop:
+    - clickFn is passed as prop.
+    - The function definition is specified in App component.
+    - The click is triggered from Die component.
+    - To identify, which die is clicked, the function is passed with the die's nanoid.
+    - App component:
+         - <Die clickFn={() => {clickDice(nanoid)}}>
+    - Die component:
+         - onClick event is triggered.
+    
 
 ## Live Demo
 (https://scrimba-krishna-v-react-game-tenzies.netlify.app/)
